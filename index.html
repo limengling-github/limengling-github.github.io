@@ -70,6 +70,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-添加类名" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/23/添加类名/" class="article-date">
+  <time datetime="2017-06-23T15:14:24.000Z" itemprop="datePublished">2017-06-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/js/">js</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/23/添加类名/">添加类名</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Js添加样式名，在用jQuery的时候很容易的一个add和remove就能解决的问题，但是用js该怎么样处理呢，刚看了一篇文章，菜鸟级的《JavaScript初学者应注意的七个细节》，原文地址:<a href="http://developer.51cto.com/art/201101/242546_2.htm" target="_blank" rel="external">http://developer.51cto.com/art/201101/242546_2.htm</a></p>
+<h2 id="一、判定是否为空，如果不为空就赋值样式名字；"><a href="#一、判定是否为空，如果不为空就赋值样式名字；" class="headerlink" title="一、判定是否为空，如果不为空就赋值样式名字；"></a>一、判定是否为空，如果不为空就赋值样式名字；</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function addClass(elm,newClass)&#123;</div><div class="line">  var class=elm.className;</div><div class="line">  if(class!="")&#123;</div><div class="line">  elm.className=newClass;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="二、判定是否为空，如果为空就赋值，否则就加个空格再赋值；"><a href="#二、判定是否为空，如果为空就赋值，否则就加个空格再赋值；" class="headerlink" title="二、判定是否为空，如果为空就赋值，否则就加个空格再赋值；"></a>二、判定是否为空，如果为空就赋值，否则就加个空格再赋值；</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function addClass(elm,newClass)&#123;</div><div class="line">  var class=elm.className;</div><div class="line">  elm.className=(class=="")?newClass:c+""+newClass;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="用split、push、join给元素添加class-保证没有重复的名字存在"><a href="#用split、push、join给元素添加class-保证没有重复的名字存在" class="headerlink" title="用split、push、join给元素添加class(保证没有重复的名字存在)"></a>用split、push、join给元素添加class(保证没有重复的名字存在)</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function addClass(elm,newClass)&#123;</div><div class="line">  var class=elm.className.split("");</div><div class="line">  for(var i=0;i&lt;class.length;i++)&#123;</div><div class="line">     if(class[i]==newClass)&#123;</div><div class="line">     return;  </div><div class="line">     &#125;</div><div class="line">     else&#123;</div><div class="line">       class.push(newClass)</div><div class="line">     &#125;</div><div class="line">  &#125;</div><div class="line">  elm.className=class.join("");_</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/23/添加类名/" data-id="cj4a01bhm000154qvm0kjfgv1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog-learning/">blog learning</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-关于html5的一些技巧" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/06/10/关于html5的一些技巧/" class="article-date">
@@ -114,7 +160,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/10/关于html5的一些技巧/" data-id="cj41fmfqk0000c0qvab3ddcoy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/10/关于html5的一些技巧/" data-id="cj4a01bht000254qvcuf5fe41" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog-learning/">blog learning</a></li></ul>
@@ -158,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/10/闭包/" data-id="cj41fmfrc0004c0qvupv6qrkb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/10/闭包/" data-id="cj4a01bi5000554qvcvn6rq7m" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog-interview/">blog interview</a></li></ul>
@@ -208,7 +254,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/10/git上传代码/" data-id="cj41fmfrg0005c0qv9dvssrr0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/10/git上传代码/" data-id="cj4a01bjk000g54qvz1sfoes3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog-learning/">blog learning</a></li></ul>
@@ -255,7 +301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/09/hello-world/" data-id="cj41fmfqx0001c0qvlfx8tuew" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/09/hello-world/" data-id="cj4a01bhe000054qvrvvunrs7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -314,6 +360,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/23/添加类名/">添加类名</a>
+          </li>
         
           <li>
             <a href="/2017/06/10/关于html5的一些技巧/">关于html5的一些技巧</a>
